@@ -10,6 +10,7 @@
 #define __INDICATOR_BASE_MQH__
 
 #include "..\\Common\\Source.mqh"
+#include <Object.mqh>
 
 //+------------------------------------------------------------------+
 //| IndicatorBase                                                    |
@@ -32,7 +33,7 @@
 //| • Series storage                                                  |
 //| • Parameter validation                                            |
 //+------------------------------------------------------------------+
-class IndicatorBase
+class IndicatorBase : public CObject
 {
 protected:
 
@@ -70,6 +71,16 @@ public:
       m_errorValue = errorValue;
    }
 
+   int GetMaxBarsBack() const
+   {
+      return m_maxBarsBack;
+   }
+
+   double GetErrorValue() const
+   {
+      return m_errorValue;
+   }
+
    //+------------------------------------------------------------------+
    //| Lifecycle                                                        |
    //+------------------------------------------------------------------+
@@ -88,7 +99,7 @@ public:
    //| Value Access                                                     |
    //+------------------------------------------------------------------+
    virtual double GetValue(const int index,
-                           const int lineIndex = 0) = 0;
+                           const int lineIndex = 0) const = 0;
 };
 
 #endif // __INDICATOR_BASE_MQH__

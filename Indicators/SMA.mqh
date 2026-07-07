@@ -153,7 +153,7 @@ public:
    //| Value Access                                                     |
    //+------------------------------------------------------------------+
    virtual double GetValue(const int index,
-                           const int lineIndex = 0)
+                           const int lineIndex = 0) const
    {
       if(lineIndex != MAIN)
          return(m_errorValue);
