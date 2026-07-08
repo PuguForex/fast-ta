@@ -7,7 +7,7 @@ Minimal, high-performance streaming technical analysis library for MQL5.
 * Live-bar updates and historical value access.
 * Minimal, reusable, composition-first architecture.
 
-**Status:** Early development — SMA, EMA, SMMA, and LWMA implemented and validated against native MT5 output.
+**Status:** Early development — SMA, EMA, SMMA, LWMA, RSI, and Stochastic implemented and validated against native MT5 output
 
 ⚠️ **DISCLAIMER & LIABILITY WARNING**
 This code was developed with the assistance of an AI system. While care has been taken to follow sound MQL5 design and coding practices, users must independently review, audit, and thoroughly test the code in a demo environment before deploying it in production or live trading environments. 
